@@ -1,0 +1,23 @@
+/* Masquer la barre de défilement sur les navigateurs WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    width: 0; /* Définir la largeur de la barre de défilement si nécessaire */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; /* Couleur de l'arrière-plan de la piste de défilement */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Couleur du bouton de la barre de défilement */
+}
+
+/* Masquer la barre de défilement sur les autres navigateurs (Firefox, Edge, etc.) */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Ajouter du défilement à la page */
+body {
+    overflow-y: scroll;
+}

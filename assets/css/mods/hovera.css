@@ -1,0 +1,52 @@
+header>nav>a, #whoami>#whotxt>a{
+    color: var(--black);
+    font-weight: 600;
+    margin: .5px;
+    position: relative;
+    padding: .5em .8em;
+}
+
+header>nav>a::before,
+header>nav>a::after, 
+#whoami>#whotxt>a::before, 
+#whoami>#whotxt>a::after{
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+header>nav>a::before,
+#whoami>#whotxt>a::before{
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid var(--red);
+    border-right: 3px solid var(--red);
+    transform: translate(-100%, 50%);
+}
+
+header>nav>a:after,
+#whoami>#whotxt>a:after{
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid var(--red);
+    border-left: 3px solid var(--red);
+    transform: translate(100%, -50%)
+}
+
+header>nav>a:hover:before,
+header>nav>a:hover:after,
+#whoami>#whotxt>a:hover:before,
+#whoami>#whotxt>a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+header>nav>a:hover,
+#whoami>#whotxt>a:hover{
+    color: var(--red);
+}
